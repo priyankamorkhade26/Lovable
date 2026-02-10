@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: #fcfbf8;
@@ -226,3 +227,59 @@ main img {
   height: 100vh;
 }
 
+.extra-options p {
+  position: relative;
+}
+
+.extra-options p::before {
+  content: "Chat without making edits to create a plan.";
+  color: #181818;
+  background-color: #fcfbf8;
+  padding: 4px;
+  border-radius: 4px;
+  position: absolute;
+  width: 240px;
+  top: -32px;
+  /* left: 10px; */
+  right: -120px;
+  font-size: 12px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.extra-options p:hover::before {
+  opacity: 1;
+}
+
+.header-right i {
+  color: white;
+  display: none;
+  margin-left: 10px;
+}
+
+/* responsive code */
+
+@media (width <= 1024px) {
+  .header-left nav {
+    display: none;
+  }
+
+  main img {
+    top: 50%;
+    scale: 3;
+  }
+}
+
+@media (width <= 768px) {
+  .login-btn {
+    display: none;
+  }
+
+  .header-right i {
+    display: inline;
+  }
+
+  .input-container {
+    width: 80vw;
+  }
+}
